@@ -1,16 +1,6 @@
 import * as React from "react";
-import {
-  ChevronLeft,
-  ChevronRight,
-  Copy,
-  CreditCard,
-  File,
-  ListFilter,
-  MoreVertical,
-  Truck,
-} from "lucide-react";
+import { File, ListFilter } from "lucide-react";
 
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -24,26 +14,11 @@ import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
-  DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-} from "@/components/ui/pagination";
 import { Progress } from "@/components/ui/progress";
-import { Separator } from "@/components/ui/separator";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function SchoolDashboardPage() {
@@ -53,20 +28,21 @@ export default function SchoolDashboardPage() {
         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
           <Card className="sm:col-span-2" x-chunk="dashboard-05-chunk-0">
             <CardHeader className="pb-3">
-              <CardTitle>Your Orders</CardTitle>
+              <CardTitle>
+                <h1 className="text-3xl font-bold">
+                  Selamat datang, SMA Abydos
+                </h1>
+              </CardTitle>
               <CardDescription className="max-w-lg text-balance leading-relaxed">
-                Introducing Our Dynamic Orders Dashboard for Seamless Management
-                and Insightful Analysis.
+                Introducing Our Dynamic Dashboard for Seamless Management and
+                Insightful Analysis.
               </CardDescription>
             </CardHeader>
-            <CardFooter>
-              <Button>Create New Order</Button>
-            </CardFooter>
           </Card>
           <Card x-chunk="dashboard-05-chunk-1">
             <CardHeader className="pb-2">
-              <CardDescription>This Week</CardDescription>
-              <CardTitle className="text-4xl">$1,329</CardTitle>
+              <CardDescription>Sampah Minggu Ini</CardDescription>
+              <CardTitle className="text-4xl">1,329 ton</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="text-xs text-muted-foreground">
@@ -77,10 +53,10 @@ export default function SchoolDashboardPage() {
               <Progress value={25} aria-label="25% increase" />
             </CardFooter>
           </Card>
-          <Card x-chunk="dashboard-05-chunk-2">
+          <Card>
             <CardHeader className="pb-2">
-              <CardDescription>This Month</CardDescription>
-              <CardTitle className="text-4xl">$5,329</CardTitle>
+              <CardDescription>Sampah Bulan Ini</CardDescription>
+              <CardTitle className="text-4xl">5,329 ton</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="text-xs text-muted-foreground">
@@ -92,12 +68,13 @@ export default function SchoolDashboardPage() {
             </CardFooter>
           </Card>
         </div>
+
         <Tabs defaultValue="week">
           <div className="flex items-center">
             <TabsList>
-              <TabsTrigger value="week">Week</TabsTrigger>
-              <TabsTrigger value="month">Month</TabsTrigger>
-              <TabsTrigger value="year">Year</TabsTrigger>
+              <TabsTrigger value="week">Minggu</TabsTrigger>
+              <TabsTrigger value="month">Bulan</TabsTrigger>
+              <TabsTrigger value="year">Tahun</TabsTrigger>
             </TabsList>
             <div className="ml-auto flex items-center gap-2">
               <DropdownMenu>
@@ -127,194 +104,127 @@ export default function SchoolDashboardPage() {
               </Button>
             </div>
           </div>
+
           <TabsContent value="week">
-            <Card x-chunk="dashboard-05-chunk-3">
+            <Card>
               <CardHeader className="px-7">
-                <CardTitle>Orders</CardTitle>
+                <CardTitle>Ringkasan</CardTitle>
                 <CardDescription>
-                  Recent orders from your store.
+                  Ringkasan data sampah minggu ini.
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      <TableHead>Customer</TableHead>
-                      <TableHead className="hidden sm:table-cell">
-                        Type
-                      </TableHead>
-                      <TableHead className="hidden sm:table-cell">
-                        Status
-                      </TableHead>
-                      <TableHead className="hidden md:table-cell">
-                        Date
-                      </TableHead>
-                      <TableHead className="text-right">Amount</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    <TableRow className="bg-accent">
-                      <TableCell>
-                        <div className="font-medium">Liam Johnson</div>
-                        <div className="hidden text-sm text-muted-foreground md:inline">
-                          liam@example.com
-                        </div>
-                      </TableCell>
-                      <TableCell className="hidden sm:table-cell">
-                        Sale
-                      </TableCell>
-                      <TableCell className="hidden sm:table-cell">
-                        <Badge className="text-xs" variant="secondary">
-                          Fulfilled
-                        </Badge>
-                      </TableCell>
-                      <TableCell className="hidden md:table-cell">
-                        2023-06-23
-                      </TableCell>
-                      <TableCell className="text-right">$250.00</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>
-                        <div className="font-medium">Olivia Smith</div>
-                        <div className="hidden text-sm text-muted-foreground md:inline">
-                          olivia@example.com
-                        </div>
-                      </TableCell>
-                      <TableCell className="hidden sm:table-cell">
-                        Refund
-                      </TableCell>
-                      <TableCell className="hidden sm:table-cell">
-                        <Badge className="text-xs" variant="outline">
-                          Declined
-                        </Badge>
-                      </TableCell>
-                      <TableCell className="hidden md:table-cell">
-                        2023-06-24
-                      </TableCell>
-                      <TableCell className="text-right">$150.00</TableCell>
-                    </TableRow>
-                    {/* <TableRow>
-              <TableCell>
-                <div className="font-medium">Liam Johnson</div>
-                <div className="hidden text-sm text-muted-foreground md:inline">
-                  liam@example.com
+                <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
+                  <Card className="bg-green-100">
+                    <CardHeader className="pb-1">
+                      <CardDescription className="text-base">
+                        Total sampah organik
+                      </CardDescription>
+                      <CardTitle className="text-2xl">1909 buah</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-xs text-muted-foreground">
+                        +25% from last week
+                      </div>
+                    </CardContent>
+                  </Card>
+                  <Card className="bg-red-100">
+                    <CardHeader className="pb-1">
+                      <CardDescription className="text-base">
+                        Total sampah anorganik
+                      </CardDescription>
+                      <CardTitle className="text-2xl">1,329 buah</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-xs text-muted-foreground">
+                        +25% from last week
+                      </div>
+                    </CardContent>
+                  </Card>
+                  <Card className="bg-yellow-100">
+                    <CardHeader className="pb-1">
+                      <CardDescription className="text-base">
+                        Total sampah residu
+                      </CardDescription>
+                      <CardTitle className="text-2xl">1,329 buah</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-xs text-muted-foreground">
+                        +25% from last week
+                      </div>
+                    </CardContent>
+                  </Card>
+                  <Card>
+                    <CardHeader className="pb-1">
+                      <CardDescription className="text-base">
+                        Sampah Bulan Ini
+                      </CardDescription>
+                      <CardTitle className="text-2xl">5,329 buah</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-xs text-muted-foreground">
+                        +10% from last month
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-blue-100 row-span-2 col-span-2">
+                    <CardHeader className="pb-1">
+                      <CardDescription className="text-base">
+                        Total sampah residu
+                      </CardDescription>
+                      <CardTitle className="text-2xl">1,329 buah</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-xs text-muted-foreground">
+                        +25% from last week
+                      </div>
+                    </CardContent>
+                  </Card>
+
+
+                  <Card>
+                    <CardHeader className="pb-1">
+                      <CardDescription className="text-base">
+                        Sampah Bulan Ini
+                      </CardDescription>
+                      <CardTitle className="text-2xl">5,329 buah</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-xs text-muted-foreground">
+                        +10% from last month
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card>
+                    <CardHeader className="pb-1">
+                      <CardDescription className="text-base">
+                        Sampah Bulan Ini
+                      </CardDescription>
+                      <CardTitle className="text-2xl">5,329 buah</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-xs text-muted-foreground">
+                        +10% from last month
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card>
+                    <CardHeader className="pb-1">
+                      <CardDescription className="text-base">
+                        Sampah Bulan Ini
+                      </CardDescription>
+                      <CardTitle className="text-2xl">5,329 buah</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-xs text-muted-foreground">
+                        +10% from last month
+                      </div>
+                    </CardContent>
+                  </Card>
                 </div>
-              </TableCell>
-              <TableCell className="hidden sm:table-cell">
-                Sale
-              </TableCell>
-              <TableCell className="hidden sm:table-cell">
-                <Badge className="text-xs" variant="secondary">
-                  Fulfilled
-                </Badge>
-              </TableCell>
-              <TableCell className="hidden md:table-cell">
-                2023-06-23
-              </TableCell>
-              <TableCell className="text-right">$250.00</TableCell>
-            </TableRow> */}
-                    <TableRow>
-                      <TableCell>
-                        <div className="font-medium">Noah Williams</div>
-                        <div className="hidden text-sm text-muted-foreground md:inline">
-                          noah@example.com
-                        </div>
-                      </TableCell>
-                      <TableCell className="hidden sm:table-cell">
-                        Subscription
-                      </TableCell>
-                      <TableCell className="hidden sm:table-cell">
-                        <Badge className="text-xs" variant="secondary">
-                          Fulfilled
-                        </Badge>
-                      </TableCell>
-                      <TableCell className="hidden md:table-cell">
-                        2023-06-25
-                      </TableCell>
-                      <TableCell className="text-right">$350.00</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>
-                        <div className="font-medium">Emma Brown</div>
-                        <div className="hidden text-sm text-muted-foreground md:inline">
-                          emma@example.com
-                        </div>
-                      </TableCell>
-                      <TableCell className="hidden sm:table-cell">
-                        Sale
-                      </TableCell>
-                      <TableCell className="hidden sm:table-cell">
-                        <Badge className="text-xs" variant="secondary">
-                          Fulfilled
-                        </Badge>
-                      </TableCell>
-                      <TableCell className="hidden md:table-cell">
-                        2023-06-26
-                      </TableCell>
-                      <TableCell className="text-right">$450.00</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>
-                        <div className="font-medium">Liam Johnson</div>
-                        <div className="hidden text-sm text-muted-foreground md:inline">
-                          liam@example.com
-                        </div>
-                      </TableCell>
-                      <TableCell className="hidden sm:table-cell">
-                        Sale
-                      </TableCell>
-                      <TableCell className="hidden sm:table-cell">
-                        <Badge className="text-xs" variant="secondary">
-                          Fulfilled
-                        </Badge>
-                      </TableCell>
-                      <TableCell className="hidden md:table-cell">
-                        2023-06-23
-                      </TableCell>
-                      <TableCell className="text-right">$250.00</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>
-                        <div className="font-medium">Olivia Smith</div>
-                        <div className="hidden text-sm text-muted-foreground md:inline">
-                          olivia@example.com
-                        </div>
-                      </TableCell>
-                      <TableCell className="hidden sm:table-cell">
-                        Refund
-                      </TableCell>
-                      <TableCell className="hidden sm:table-cell">
-                        <Badge className="text-xs" variant="outline">
-                          Declined
-                        </Badge>
-                      </TableCell>
-                      <TableCell className="hidden md:table-cell">
-                        2023-06-24
-                      </TableCell>
-                      <TableCell className="text-right">$150.00</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>
-                        <div className="font-medium">Emma Brown</div>
-                        <div className="hidden text-sm text-muted-foreground md:inline">
-                          emma@example.com
-                        </div>
-                      </TableCell>
-                      <TableCell className="hidden sm:table-cell">
-                        Sale
-                      </TableCell>
-                      <TableCell className="hidden sm:table-cell">
-                        <Badge className="text-xs" variant="secondary">
-                          Fulfilled
-                        </Badge>
-                      </TableCell>
-                      <TableCell className="hidden md:table-cell">
-                        2023-06-26
-                      </TableCell>
-                      <TableCell className="text-right">$450.00</TableCell>
-                    </TableRow>
-                  </TableBody>
-                </Table>
               </CardContent>
             </Card>
           </TabsContent>
