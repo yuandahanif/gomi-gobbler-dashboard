@@ -203,11 +203,11 @@ export default function SchoolDashboardPage() {
                       <CardDescription className="text-base">
                         Kategori sampah benar
                       </CardDescription>
-                      <CardTitle className="text-2xl">5,329 buah</CardTitle>
+                      <CardTitle className="text-2xl">5,179 buah</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="text-xs text-muted-foreground">
-                        +10% from last month
+                        +99% dari minggu lalu
                       </div>
                     </CardContent>
                   </Card>
@@ -217,11 +217,11 @@ export default function SchoolDashboardPage() {
                       <CardDescription className="text-base">
                         Kategori sampah salah
                       </CardDescription>
-                      <CardTitle className="text-2xl">5,329 buah</CardTitle>
+                      <CardTitle className="text-2xl">40 buah</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="text-xs text-muted-foreground">
-                        +10% from last month
+                        +1% dari minggu lalu
                       </div>
                     </CardContent>
                   </Card>
@@ -231,11 +231,13 @@ export default function SchoolDashboardPage() {
                       <CardDescription className="text-base">
                         Partisipasi siswa
                       </CardDescription>
-                      <CardTitle className="text-2xl">5,329 buah</CardTitle>
+                      <CardTitle className="text-2xl">
+                        1,329 interaksi
+                      </CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="text-xs text-muted-foreground">
-                        +10% from last month
+                        +10% dari minggu lalu
                       </div>
                     </CardContent>
                   </Card>
