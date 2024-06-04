@@ -21,7 +21,7 @@ export default function Home() {
 
       <div className="flex gap-4 justify-center">
         <Link href={"/mobile"}>
-          <Button>Download</Button>
+          <Button>Coba</Button>
         </Link>
         <Link href={"/dashboard"}>
           <Button variant="ghost">Masuk</Button>

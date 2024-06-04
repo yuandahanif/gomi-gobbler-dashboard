@@ -12,7 +12,7 @@ export default function MobileRootLayout({
 }>) {
   return (
     <div className="w-full h-full min-h-screen bg-muted flex justify-center items-center">
-      <div className="max-w-screen-sm w-[400px] h-[840px] bg-white overflow-x-hidden overflow-y-auto">{children}</div>
+      <div className="max-w-screen-sm w-[400px] h-[840px] bg-white overflow-hidden">{children}</div>
     </div>
   );
 }

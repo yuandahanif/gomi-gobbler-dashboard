@@ -13,8 +13,20 @@ export default function MobilenavLayout({
 }>) {
   return (
     <div className="flex flex-col h-full w-full">
-      {children}
-      <nav className="sticky bottom-0 w-full border-t">
+      <header className="relative z-50 flex flex-col w-full">
+        <div className="h-6 w-full bg-black flex justify-center items-center">
+          <p className="text-gray-500 text-xs">tidak ada jaringan</p>
+        </div>
+        <div className="flex justify-between p-2 border-b">
+          <h1 className="text-lg font-bold">Mobile App</h1>
+        </div>
+      </header>
+
+      <main className="flex flex-1 h-full w-full items-center justify-center">
+        {children}
+      </main>
+
+      <nav className="sticky bg-white z-50 bottom-0 w-full border-t">
         <ul className="flex w-full justify-around">
           <li>
             <Link href="/mobile/nav/home" className="p-3 block">
@@ -23,19 +35,19 @@ export default function MobilenavLayout({
             </Link>
           </li>
           <li>
-            <Link href="/mobile/nav/home" className="p-3 block">
+            <Link href="/mobile/nav/rank" className="p-3 block">
               <ListOrdered />
               <span className="sr-only">Peringkat</span>
             </Link>
           </li>
           <li>
-            <Link href="/mobile/nav/home" className="p-3 block">
+            <Link href="/mobile/nav/shop" className="p-3 block">
               <ShoppingCart />
               <span className="sr-only">Toko</span>
             </Link>
           </li>
           <li>
-            <Link href="/mobile/nav/home" className="p-3 block">
+            <Link href="/mobile/nav/profile" className="p-3 block">
               <UserRound />
               <span className="sr-only">Profile</span>
             </Link>
