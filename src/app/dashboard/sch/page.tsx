@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Image from "next/image";
 
 export default function SchoolDashboardPage() {
   return (
@@ -168,25 +169,39 @@ export default function SchoolDashboardPage() {
                     </CardContent>
                   </Card>
 
-                  <Card className="bg-blue-100 row-span-2 col-span-2">
+                  {/* Map tempat sampah */}
+                  <Card className="row-span-3 col-span-3">
                     <CardHeader className="pb-1">
                       <CardDescription className="text-base">
-                        Total sampah residu
+                        Heatmap penggunaan tempat sampah
                       </CardDescription>
-                      <CardTitle className="text-2xl">1,329 buah</CardTitle>
+                      <CardTitle className="text-base"></CardTitle>
                     </CardHeader>
-                    <CardContent>
-                      <div className="text-xs text-muted-foreground">
-                        +25% from last week
+                    <CardContent className="flex w-full h-4/5">
+                      <div className="relative h-full w-full text-xs text-muted-foreground">
+                        <Image
+                          className="object-contain w-full h-full"
+                          src={"/images/sch-map-default.png"}
+                          alt="map sekolah"
+                          fill
+                        />
                       </div>
                     </CardContent>
+                    <CardFooter>
+                      <div className="text-xs flex justify-center w-full gap-2">
+                        <span>paling jarang</span>
+                        <div className="h-4 w-60 bg-gradient-to-r from-green-300 via-yellow-400 to-red-500">
+                          <span className="sr-only">heatmap range</span>
+                        </div>
+                        <span>paling sering</span>
+                      </div>
+                    </CardFooter>
                   </Card>
-
 
                   <Card>
                     <CardHeader className="pb-1">
                       <CardDescription className="text-base">
-                        Sampah Bulan Ini
+                        Kategori sampah benar
                       </CardDescription>
                       <CardTitle className="text-2xl">5,329 buah</CardTitle>
                     </CardHeader>
@@ -200,7 +215,7 @@ export default function SchoolDashboardPage() {
                   <Card>
                     <CardHeader className="pb-1">
                       <CardDescription className="text-base">
-                        Sampah Bulan Ini
+                        Kategori sampah salah
                       </CardDescription>
                       <CardTitle className="text-2xl">5,329 buah</CardTitle>
                     </CardHeader>
@@ -214,7 +229,7 @@ export default function SchoolDashboardPage() {
                   <Card>
                     <CardHeader className="pb-1">
                       <CardDescription className="text-base">
-                        Sampah Bulan Ini
+                        Partisipasi siswa
                       </CardDescription>
                       <CardTitle className="text-2xl">5,329 buah</CardTitle>
                     </CardHeader>
