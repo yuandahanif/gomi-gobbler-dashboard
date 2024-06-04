@@ -21,6 +21,7 @@ import {
 import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
+import CustomBarChart from "@/components/chart/bar-chart";
 
 export default function SchoolDashboardPage() {
   return (
@@ -143,7 +144,7 @@ export default function SchoolDashboardPage() {
                     </CardContent>
                   </Card>
                   <Card className="bg-yellow-100">
-                    <CardHeader className="pb-1">
+                    <CardHeader className="pb-0">
                       <CardDescription className="text-base">
                         Total sampah residu
                       </CardDescription>
@@ -158,20 +159,18 @@ export default function SchoolDashboardPage() {
                   <Card>
                     <CardHeader className="pb-1">
                       <CardDescription className="text-base">
-                        Sampah Bulan Ini
+                        Volume per hari
                       </CardDescription>
-                      <CardTitle className="text-2xl">5,329 buah</CardTitle>
+                      <CardTitle className=""></CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <div className="text-xs text-muted-foreground">
-                        +10% from last month
-                      </div>
+                      <CustomBarChart />
                     </CardContent>
                   </Card>
 
                   {/* Map tempat sampah */}
                   <Card className="row-span-3 col-span-3">
-                    <CardHeader className="pb-1">
+                    <CardHeader className="pb-0">
                       <CardDescription className="text-base">
                         Heatmap penggunaan tempat sampah
                       </CardDescription>
@@ -189,11 +188,11 @@ export default function SchoolDashboardPage() {
                     </CardContent>
                     <CardFooter>
                       <div className="text-xs flex justify-center w-full gap-2">
-                        <span>paling jarang</span>
+                        <span>0 interaksi</span>
                         <div className="h-4 w-60 bg-gradient-to-r from-green-300 via-yellow-400 to-red-500">
                           <span className="sr-only">heatmap range</span>
                         </div>
-                        <span>paling sering</span>
+                        <span>429 interaksi</span>
                       </div>
                     </CardFooter>
                   </Card>
