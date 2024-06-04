@@ -41,6 +41,7 @@ import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ModeToggle } from "@/components/dark-mode/dark-mode-toggle";
 import SidebarItem from "@/components/sidebar/sidebar-item";
+import HeaderBreadcrumb from "@/components/header/header-breadcrumb";
 
 export default function SchoolDashboardLayout({
   children,
@@ -58,10 +59,26 @@ export default function SchoolDashboardLayout({
             <Package2 className="h-4 w-4 transition-all group-hover:scale-110" />
             <span className="sr-only">:3</span>
           </Link>
-          <SidebarItem href="/dashboard/sch" label="Dashboard" icon={<Home className="h-5 w-5" />} />
-          <SidebarItem href="/dashboard/sch/trash-bin" label="Tempat Sampah" icon={<Trash2 className="h-5 w-5" />} />
-          <SidebarItem href="/dashboard/sch/students" label="Siswa" icon={<Users className="h-5 w-5" />} />
-          <SidebarItem href="/dashboard/sch/analitics" label="Analitik" icon={<LineChart className="h-5 w-5" />} />
+          <SidebarItem
+            href="/dashboard/sch"
+            label="Dashboard"
+            icon={<Home className="h-5 w-5" />}
+          />
+          <SidebarItem
+            href="/dashboard/sch/trash-bin"
+            label="Tempat Sampah"
+            icon={<Trash2 className="h-5 w-5" />}
+          />
+          <SidebarItem
+            href="/dashboard/sch/students"
+            label="Siswa"
+            icon={<Users className="h-5 w-5" />}
+          />
+          <SidebarItem
+            href="/dashboard/sch/analitics"
+            label="Analitik"
+            icon={<LineChart className="h-5 w-5" />}
+          />
         </nav>
         <nav className="mt-auto flex flex-col items-center gap-4 px-2 sm:py-4">
           <Tooltip>
@@ -135,25 +152,9 @@ export default function SchoolDashboardLayout({
               </nav>
             </SheetContent>
           </Sheet>
-          <Breadcrumb className="hidden md:flex">
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link href="#">Dashboard</Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-                  <Link href="#">Orders</Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>Recent Orders</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
+
+          <HeaderBreadcrumb />
+
           <div className="relative ml-auto flex-1 md:grow-0">
             <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
             <Input
