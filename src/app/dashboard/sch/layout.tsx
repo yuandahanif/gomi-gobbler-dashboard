@@ -19,15 +19,6 @@ import {
   Users,
   Users2,
 } from "lucide-react";
-
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -198,7 +189,9 @@ export default function SchoolDashboardLayout({
         {children}
 
         <footer className="flex w-full justify-center h-14 items-center gap-4 border-t bg-background px-4 sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
-          <p className="text-sm text-center">&copy; 2024 neroi.space All rights reserved.</p>
+          <p className="text-sm text-center">
+            &copy; 2024 neroi.space All rights reserved.
+          </p>
         </footer>
       </div>
     </div>
