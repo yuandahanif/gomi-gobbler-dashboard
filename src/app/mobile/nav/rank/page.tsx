@@ -77,7 +77,7 @@ const userRank = 3;
 
 export default function MobileRankPage() {
   return (
-    <div className="relative flex h-full w-full flex-col p-1">
+    <div className="relative flex h-full w-full flex-col p-2 pr-2">
       <div className="mb-2 flex h-44 w-full flex-col items-center overflow-hidden rounded-sm rounded-b-3xl bg-gradient-to-r from-rose-400 to-red-500">
         <div className="mt-auto flex h-4/5 w-full items-end justify-evenly">
           <div

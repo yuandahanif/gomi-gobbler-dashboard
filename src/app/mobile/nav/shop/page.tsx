@@ -86,10 +86,10 @@ const physical_items = [
   },
 ];
 
-export default function MobileRankPage() {
+export default function MobileShopPage() {
   return (
-    <ScrollArea className="h-full w-full p-1 pb-32">
-      <div className="relative mb-2 flex h-44 w-full flex-col items-center overflow-hidden rounded-sm rounded-b-3xl bg-gradient-to-r from-rose-400 to-red-500">
+    <ScrollArea className="h-full w-full p-1 pb-32 pl-2 pr-3">
+      <div className="relative mb-2 flex h-44 w-full flex-col items-center overflow-hidden rounded-sm rounded-b-3xl bg-gradient-to-r from-teal-200 to-teal-500">
         <ShoppingCart className="absolute left-10 top-5 h-36 w-36 -rotate-45 text-white" />
         <div className="mb-5 ml-auto mr-5 flex h-full w-1/2 items-end justify-end text-end">
           <h1 style={font.style} className="text-xl text-white">
@@ -98,13 +98,13 @@ export default function MobileRankPage() {
         </div>
       </div>
 
-      <div className="sticky top-0 z-20 -mt-1 bg-white p-3 shadow-sm">
+      <div className="sticky top-0 z-auto -mt-1 bg-white p-3 shadow-sm">
         <p className="text-right text-sm">
           poinmu: <span className="font-semibold">100</span>
         </p>
       </div>
 
-      <div className="relative flex items-center">
+      <div className="relative mb-1 flex items-center">
         <h3 className="mx-auto mb-2 mt-3 text-center text-lg font-semibold leading-none">
           Barang Virtual
         </h3>
@@ -136,7 +136,7 @@ export default function MobileRankPage() {
 
       <Separator className="my-5" />
 
-      <div className="relative flex items-center">
+      <div className="relative mb-1 flex items-center">
         <h3 className="mx-auto mb-2 mt-3 text-center text-lg font-semibold leading-none">
           Barang Fisik
         </h3>

@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { Home, ListOrdered, ShoppingCart, UserRound } from "lucide-react";
+import {
+  BookOpenCheck,
+  Home,
+  ListOrdered,
+  ShoppingCart,
+  UserRound,
+} from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import MobileNavbarItem from "@/components/mobile/navbar/navbar-item";
 
 export const metadata: Metadata = {
   title: "Mobile App Prototype",
@@ -41,28 +48,39 @@ export default function MobilenavLayout({
       <nav className="sticky bottom-0 z-50 w-full border-t bg-white">
         <ul className="flex w-full justify-around">
           <li>
-            <Link href="/mobile/nav/home" className="block p-3">
-              <Home />
-              <span className="sr-only">Beranda</span>
-            </Link>
+            <MobileNavbarItem
+              icon={<Home />}
+              label="Beranda"
+              href="/mobile/nav/home"
+            />
           </li>
           <li>
-            <Link href="/mobile/nav/rank" className="block p-3">
-              <ListOrdered />
-              <span className="sr-only">Peringkat</span>
-            </Link>
+            <MobileNavbarItem
+              icon={<ListOrdered />}
+              label="Peringkat"
+              href="/mobile/nav/rank"
+            />
           </li>
           <li>
-            <Link href="/mobile/nav/shop" className="block p-3">
-              <ShoppingCart />
-              <span className="sr-only">Toko</span>
-            </Link>
+            <MobileNavbarItem
+              icon={<BookOpenCheck />}
+              label="Quest"
+              href="/mobile/nav/quest"
+            />
           </li>
           <li>
-            <Link href="/mobile/nav/profile" className="block p-3">
-              <UserRound />
-              <span className="sr-only">Profile</span>
-            </Link>
+            <MobileNavbarItem
+              icon={<ShoppingCart />}
+              label="Toko"
+              href="/mobile/nav/shop"
+            />
+          </li>
+          <li>
+            <MobileNavbarItem
+              icon={<UserRound />}
+              label="Profile"
+              href="/mobile/nav/profile"
+            />
           </li>
         </ul>
       </nav>
