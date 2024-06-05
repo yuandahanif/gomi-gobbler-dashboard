@@ -33,7 +33,7 @@ export default function MobilenavLayout({
           <div>
             <Link href="/mobile/nav/credit">
               <Avatar className="h-8 w-8">
-                <AvatarImage src="https://safebooru.org//samples/4619/sample_5429d7b3d4bec2e681972180df2e673af1f39c65.jpg?4834439" />
+                <AvatarImage src="https://safebooru.org//images/4619/17289fb65697ec3adda05131d44dfdf150095533.png?4814699" />
                 <AvatarFallback>user avatar</AvatarFallback>
               </Avatar>
             </Link>

@@ -142,7 +142,7 @@ export default function MobileRankPage() {
             )}
           >
             <p className="font-semibold">
-              {idx + 4} {name}
+              {idx + 1} {name}
             </p>
             {is_fizz_buzz(idx) ? (
               <ChevronUp className="text-green-500" />
