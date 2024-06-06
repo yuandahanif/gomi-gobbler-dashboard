@@ -132,6 +132,25 @@ export default function MobileHomePage() {
 
         <ScrollBar orientation="horizontal" />
       </ScrollArea>
+
+      <div className="relative flex h-80 flex-1 flex-col items-center bg-muted">
+        <div className="absolute h-40 w-24 translate-y-12 bg-red-400">
+          {/* badan */}
+        </div>
+        <div className="absolute h-12 w-12 bg-red-300">kepala</div>
+        <div className="absolute h-36 w-8 translate-x-[60px] translate-y-12 -rotate-12 bg-red-400">
+          {/* tangan kiri */}
+        </div>
+        <div className="absolute h-36 w-8 origin-top-right -translate-x-[60px] translate-y-12 rotate-12 bg-red-400">
+          {/* tangan kanan */}
+        </div>
+        <div className="rotate-top-left absolute h-36 w-8 origin-top -translate-x-[24px] translate-y-48 bg-red-400">
+          {/* kaki kiri */}
+        </div>
+        <div className="rotate-top-right absolute h-36 w-8 translate-x-[24px] translate-y-48 bg-red-400 origin-top">
+          {/* kaki kanan */}
+        </div>
+      </div>
     </ScrollArea>
   );
 }

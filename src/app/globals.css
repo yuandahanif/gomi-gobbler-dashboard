@@ -81,6 +81,54 @@
       25% 19%
     );
   }
+
+  .rotate-top-left {
+    @apply -translate-x-[24px] translate-y-48;
+    animation: rotate-top-left 1s linear infinite;
+  }
+
+  @keyframes rotate-top-left {
+    from {
+      translate: -24px 192px;
+      transform: rotate(0deg);
+    }
+    40% {
+      translate: -24px 192px;
+      transform: rotate(-18deg);
+    }
+    80% {
+      translate: -24px 192px;
+      transform: rotate(18deg);
+    }
+    to {
+      translate: -24px 192px;
+      transform: rotate(0deg);
+    }
+  }
+
+  .rotate-top-right {
+    @apply translate-x-[24px] translate-y-48;
+    animation: rotate-top-right 1s linear infinite;
+  }
+
+  @keyframes rotate-top-right {
+    from {
+      translate: 24px 192px;
+      transform: rotate(0deg);
+    }
+    40% {
+      translate: 24px 192px;
+      transform: rotate(-18deg);
+    }
+    80% {
+      translate: 24px 192px;
+      transform: rotate(18deg);
+    }
+    to {
+      translate: 24px 192px;
+      transform: rotate(0deg);
+    }
+  }
 }
 
 @layer base {
