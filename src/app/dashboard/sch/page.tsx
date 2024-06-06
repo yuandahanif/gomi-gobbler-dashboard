@@ -30,10 +30,8 @@ export default function SchoolDashboardPage() {
         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
           <Card className="sm:col-span-2" x-chunk="dashboard-05-chunk-0">
             <CardHeader className="pb-3">
-              <CardTitle>
-                <h1 className="text-3xl font-bold">
-                  Selamat datang, SMA Abydos
-                </h1>
+              <CardTitle className="text-3xl font-bold">
+                Selamat datang, SMA Abydos
               </CardTitle>
               <CardDescription className="max-w-lg text-balance leading-relaxed">
                 Introducing Our Dynamic Dashboard for Seamless Management and
@@ -126,7 +124,7 @@ export default function SchoolDashboardPage() {
                     </CardHeader>
                     <CardContent>
                       <div className="text-xs text-muted-foreground">
-                        +25% from last week
+                        +25% dari minggu lalu
                       </div>
                     </CardContent>
                   </Card>
@@ -139,7 +137,7 @@ export default function SchoolDashboardPage() {
                     </CardHeader>
                     <CardContent>
                       <div className="text-xs text-muted-foreground">
-                        +25% from last week
+                        +25% dari minggu lalu
                       </div>
                     </CardContent>
                   </Card>
@@ -152,34 +150,36 @@ export default function SchoolDashboardPage() {
                     </CardHeader>
                     <CardContent>
                       <div className="text-xs text-muted-foreground">
-                        +25% from last week
+                        +25% dari minggu lalu
                       </div>
                     </CardContent>
                   </Card>
                   <Card>
                     <CardHeader className="pb-1">
                       <CardDescription className="text-base">
-                        Volume per hari
+                        Tempat sampah penuh
                       </CardDescription>
-                      <CardTitle className=""></CardTitle>
+                      <CardTitle className="text-2xl">1/3</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <CustomBarChart />
+                      <div className="text-xs text-muted-foreground">
+                        Terakhir diangkut 2 hari yang lalu
+                      </div>
                     </CardContent>
                   </Card>
 
                   {/* Map tempat sampah */}
-                  <Card className="row-span-3 col-span-3">
+                  <Card className="col-span-3 row-span-3">
                     <CardHeader className="pb-0">
                       <CardDescription className="text-base">
                         Heatmap penggunaan tempat sampah
                       </CardDescription>
                       <CardTitle className="text-base"></CardTitle>
                     </CardHeader>
-                    <CardContent className="flex w-full h-4/5">
+                    <CardContent className="flex h-4/5 w-full">
                       <div className="relative h-full w-full text-xs text-muted-foreground">
                         <Image
-                          className="object-contain w-full h-full"
+                          className="h-full w-full object-contain"
                           src={"/images/sch-map-default.png"}
                           alt="map sekolah"
                           fill
@@ -187,7 +187,7 @@ export default function SchoolDashboardPage() {
                       </div>
                     </CardContent>
                     <CardFooter>
-                      <div className="text-xs flex justify-center w-full gap-2">
+                      <div className="flex w-full justify-center gap-2 text-xs">
                         <span>0 interaksi</span>
                         <div className="h-4 w-60 bg-gradient-to-r from-green-300 via-yellow-400 to-red-500">
                           <span className="sr-only">heatmap range</span>
