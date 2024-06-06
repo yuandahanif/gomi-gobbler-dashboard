@@ -3,20 +3,15 @@ import * as React from "react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import Image from "next/image";
 
-import { Permanent_Marker } from "next/font/google";
-import {
-  CalendarSearch,
-  ChevronDown,
-  ChevronUp,
-  ListFilter,
-  ShoppingCart,
-} from "lucide-react";
+import { Baloo_Bhai_2 } from "next/font/google";
+import { ListFilter, ShoppingCart } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
-const font = Permanent_Marker({
-  weight: "400",
+const font = Baloo_Bhai_2({
+  weight: ["400", "700"],
   subsets: ["latin"],
   variable: "--font-sans",
 });
@@ -105,7 +100,7 @@ export default function MobileShopPage() {
       <div className="relative mb-2 flex h-44 w-full flex-col items-center overflow-hidden rounded-sm rounded-b-3xl bg-gradient-to-r from-teal-200 to-teal-500">
         <ShoppingCart className="absolute left-10 top-5 h-36 w-36 -rotate-45 text-white" />
         <div className="mb-5 ml-auto mr-5 flex h-full w-1/2 items-end justify-end text-end">
-          <h1 style={font.style} className="text-xl text-white">
+          <h1 style={font.style} className="text-2xl text-white font-semibold">
             Tukarkan poinmu <br /> dengan <br /> barang-barang menarik!
           </h1>
         </div>
@@ -161,7 +156,7 @@ export default function MobileShopPage() {
 
       <Separator className="my-5" />
 
-      <div className="relative mb-1 flex items-center z-10">
+      <div className="relative z-10 mb-1 flex items-center">
         <h3 className="mx-auto mb-2 mt-3 text-center text-lg font-semibold leading-none">
           Barang Fisik
         </h3>

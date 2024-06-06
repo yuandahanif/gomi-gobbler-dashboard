@@ -49,25 +49,29 @@ const news = [
     name: "Sekolah SMA A mendaftar ke program pemilahan sampah",
     reward: 10,
     description: "Mulia memilah dengan benar 10x berturut-turut",
-    icon: <Shapes />,
+    imgSrc:
+      "https://images.unsplash.com/photo-1562077981-4d7eafd44932?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Manfaat memilah sampah",
     reward: 20,
     description: "Memilah  dengan benar 50x berturut-turut",
-    icon: <Sword />,
+    imgSrc:
+      "https://images.unsplash.com/photo-1562077981-4d7eafd44932?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Program pemilahan sampah akan diperluas",
     reward: 30,
     description: "Memilah jenis organik 20x, anorganik 30x, dan residu 10x",
-    icon: <Sparkles />,
+    imgSrc:
+      "https://images.unsplash.com/photo-1562077981-4d7eafd44932?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Penyihir Pemilah",
     reward: 30,
     description: "Memilah jenis organik 20x, anorganik 30x, dan residu 10x",
-    icon: <Sparkles />,
+    imgSrc:
+      "https://images.unsplash.com/photo-1562077981-4d7eafd44932?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
@@ -109,7 +113,14 @@ export default function MobileHomePage() {
                 "mb-px flex flex-col items-center gap-2 rounded-sm border border-gray-300 bg-white p-2 text-sm",
               )}
             >
-              {acv.icon}
+              <div className="relative h-24 w-24">
+                <Image
+                  alt="news"
+                  src={acv.imgSrc}
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <div className="flex flex-wrap justify-between">
                 <p className="line-clamp-2 max-w-32 whitespace-break-spaces text-left text-sm leading-none">
                   {acv.name}

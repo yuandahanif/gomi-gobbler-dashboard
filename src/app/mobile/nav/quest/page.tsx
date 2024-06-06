@@ -2,12 +2,13 @@ import * as React from "react";
 
 import { ScrollArea } from "@/components/ui/scroll-area";
 
-import { Permanent_Marker } from "next/font/google";
+import { Baloo_Bhai_2 } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ReceiptText } from "lucide-react";
-const font = Permanent_Marker({
-  weight: "400",
+
+const font = Baloo_Bhai_2({
+  weight: ["400", "800"],
   subsets: ["latin"],
   variable: "--font-sans",
 });
@@ -61,7 +62,7 @@ export default function MobileQuestPage() {
             className="mx-auto mb-2 mt-3 text-center text-xl font-semibold leading-none text-white"
             style={font.style}
           >
-            <span className="text-2xl">Horee!!</span> Kamu membuang sampah{" "}
+            <span className="text-3xl font-semibold">Horee!!</span> Kamu membuang sampah{" "}
             <br />
             <span className="font-sans text-8xl font-semibold text-cyan-200 drop-shadow-2xl">
               691

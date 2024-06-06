@@ -3,12 +3,12 @@ import * as React from "react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import Image from "next/image";
 
-import { Permanent_Marker } from "next/font/google";
+import { Baloo_Bhai_2 } from "next/font/google";
 import { CalendarSearch, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-const font = Permanent_Marker({
-  weight: "400",
+const font = Baloo_Bhai_2({
+  weight: ["400", "700"],
   subsets: ["latin"],
   variable: "--font-sans",
 });

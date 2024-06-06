@@ -28,6 +28,15 @@ export default function MobileHome() {
           <a
             target="_blank"
             className="underline"
+            href="https://unsplash.com/photos/assorted-color-disposable-cup-lot-5Wfttm2CjeI"
+          >
+            home page news image
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            className="underline"
             href="https://safebooru.org//images/4619/17289fb65697ec3adda05131d44dfdf150095533.png?4814699"
           >
             mobile profile placeholder
