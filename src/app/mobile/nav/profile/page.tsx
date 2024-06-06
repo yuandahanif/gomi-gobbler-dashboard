@@ -126,18 +126,6 @@ export default function MobileProfilePage() {
         </div>
       </div>
 
-      {/* <div className="mt-8 flex w-full">
-        <h2 className="mb-2 mt-0 text-left text-base font-semibold leading-none text-black">
-          Profile
-        </h2>
-      </div>
-
-      <div>
-        <p>
-
-        </p>
-      </div> */}
-
       <div className="mt-4 flex w-full">
         <h2 className="mb-2 mt-0 text-left text-base font-semibold leading-none text-black">
           Riwayat Pencapaian
