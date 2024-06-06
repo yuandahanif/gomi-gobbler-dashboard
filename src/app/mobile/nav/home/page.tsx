@@ -113,12 +113,12 @@ export default function MobileHomePage() {
                 "mb-px flex flex-col items-center gap-2 rounded-sm border border-gray-300 bg-white p-2 text-sm",
               )}
             >
-              <div className="relative h-24 w-24">
+              <div className="relative h-24 w-full">
                 <Image
                   alt="news"
                   src={acv.imgSrc}
                   fill
-                  className="object-cover"
+                  className="object-cover object-center"
                 />
               </div>
               <div className="flex flex-wrap justify-between">
@@ -133,7 +133,7 @@ export default function MobileHomePage() {
         <ScrollBar orientation="horizontal" />
       </ScrollArea>
 
-      <div className="relative flex h-80 flex-1 flex-col items-center bg-muted">
+      <div className="relative mt-2 flex h-80 flex-1 flex-col items-center bg-muted">
         <div className="absolute h-40 w-24 translate-y-12 bg-red-400">
           {/* badan */}
         </div>
@@ -147,7 +147,7 @@ export default function MobileHomePage() {
         <div className="rotate-top-left absolute h-36 w-8 origin-top -translate-x-[24px] translate-y-48 bg-red-400">
           {/* kaki kiri */}
         </div>
-        <div className="rotate-top-right absolute h-36 w-8 translate-x-[24px] translate-y-48 bg-red-400 origin-top">
+        <div className="rotate-top-right absolute h-36 w-8 origin-top translate-x-[24px] translate-y-48 bg-red-400">
           {/* kaki kanan */}
         </div>
       </div>

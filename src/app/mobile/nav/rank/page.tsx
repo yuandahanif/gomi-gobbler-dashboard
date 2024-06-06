@@ -79,9 +79,9 @@ export default function MobileRankPage() {
   return (
     <div className="relative flex h-full w-full flex-col p-2 pr-2">
       <div className="mb-2 flex h-44 w-full flex-col items-center overflow-hidden rounded-sm rounded-b-3xl bg-gradient-to-r from-rose-400 to-red-500">
-        <div className="mt-auto flex h-4/5 w-full items-end justify-evenly">
+        <div className="mt-auto flex h-4/5 w-full items-end justify-center gap-2">
           <div
-            className={`relative mb-5 h-[120px] w-[120px] before:absolute before:-top-1 before:left-1/2 before:h-[200%] before:w-[60px] before:-translate-x-1/2 before:bg-[#c0c0c0] before:content-['']`}
+            className={`relative mb-5 h-[100px] w-[100px] before:absolute before:-top-1 before:left-1/2 before:h-[200%] before:w-[60px] before:-translate-x-1/2 before:bg-[#c0c0c0] before:content-['']`}
           >
             <Image
               src="/images/p-1.jpg"
@@ -89,9 +89,16 @@ export default function MobileRankPage() {
               fill
               className="clip-path-star -rotate-6 object-cover object-center"
             />
+
+            <div
+              className="absolute -top-0 left-1/2 -translate-x-1/2 -translate-y-full text-3xl font-semibold text-white"
+              style={font.style}
+            >
+              <span>2</span>
+            </div>
           </div>
           <div
-            className={`relative mb-10 h-[120px] w-[120px] before:absolute before:-top-1 before:left-1/2 before:h-[200%] before:w-[60px] before:-translate-x-1/2 before:bg-[#d4af37] before:content-['']`}
+            className={`relative mb-10 h-[100px] w-[100px] before:absolute before:-top-1 before:left-1/2 before:h-[200%] before:w-[60px] before:-translate-x-1/2 before:bg-[#d4af37] before:content-['']`}
           >
             <Image
               src="/images/p-2.jpg"
@@ -99,10 +106,16 @@ export default function MobileRankPage() {
               fill
               className="clip-path-star object-cover object-center"
             />
+            <div
+              className="absolute -top-0 left-1/2 -translate-x-1/2 -translate-y-full text-3xl font-semibold text-white"
+              style={font.style}
+            >
+              <span>1</span>
+            </div>
           </div>
 
           <div
-            className={`relative mb-0 h-[120px] w-[120px] before:absolute before:-top-1 before:left-1/2 before:h-[200%] before:w-[60px] before:-translate-x-1/2 before:bg-[#cd7f32] before:content-['']`}
+            className={`relative mb-0 h-[100px] w-[100px] before:absolute before:-top-1 before:left-1/2 before:h-[200%] before:w-[60px] before:-translate-x-1/2 before:bg-[#cd7f32] before:content-['']`}
           >
             <Image
               src="/images/p-3.jpg"
@@ -110,6 +123,12 @@ export default function MobileRankPage() {
               fill
               className="clip-path-star rotate-6 object-cover object-center"
             />
+            <div
+              className="absolute -top-0 left-1/2 -translate-x-1/2 -translate-y-full text-3xl font-semibold text-white"
+              style={font.style}
+            >
+              <span>3</span>
+            </div>
           </div>
         </div>
       </div>
