@@ -1,5 +1,5 @@
 import * as React from "react";
-import { File, ListFilter } from "lucide-react";
+import { File } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -10,14 +10,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
 import TraashLineChart from "./line-chart";
@@ -247,7 +239,8 @@ export default function SchoolTrashPage() {
                     <Card className="col-span-2 bg-red-100">
                       <CardHeader className="pb-1">
                         <CardDescription className="text-base">
-                          Tempat sampah 2 <span className="font-bold text-xl">(Penuh)</span>
+                          Tempat sampah 2{" "}
+                          <span className="text-xl font-bold">(Penuh)</span>
                         </CardDescription>
                         <CardTitle className="text-2xl"></CardTitle>
                       </CardHeader>
