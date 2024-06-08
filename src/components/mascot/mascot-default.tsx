@@ -2,13 +2,13 @@ import Image from "next/image";
 
 export default function MascotDefault() {
   return (
-    <div className="relative mx-auto flex h-auto w-72">
+    <div className="relative mx-auto flex h-auto w-72 min-h-20">
       <Image
         src="/images/mascot/foot.svg"
         alt="mascot-foot"
         height={60}
         width={60}
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-28 object-contain"
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-8 object-contain"
       />
 
       <Image

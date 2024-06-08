@@ -1,3 +1,4 @@
+import MascotDefault from "@/components/mascot/mascot-default";
 import { Button } from "@/components/ui/button";
 import { Baloo_Bhai_2 } from "next/font/google";
 import Image from "next/image";
@@ -11,15 +12,9 @@ const font = Baloo_Bhai_2({
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start gap-10 p-24">
-      <div className="relative h-96 w-96">
-        <Image
-          alt="trash can"
-          src="https://safebooru.org//samples/4619/sample_862b28f71cbd83cf95039f6a87342df7632fca32.jpg?4936620"
-          width={384}
-          height={384}
-          className="h-full w-full object-contain"
-        />
+    <main className="flex min-h-screen flex-col items-center justify-center gap-10 p-24">
+      <div className="relative h-20">
+        <MascotDefault />
       </div>
 
       <div>

@@ -2,47 +2,8 @@ import * as React from "react";
 
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
-import { Permanent_Marker } from "next/font/google";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import {
-  BookHeart,
-  Crown,
-  Facebook,
-  Instagram,
-  School,
-  Shapes,
-  Sparkles,
-  Sword,
-  Twitter,
-  VenetianMask,
-} from "lucide-react";
 import Image from "next/image";
-
-const activities = [
-  {
-    name: "Kulit pisang",
-    reward: 10,
-  },
-  {
-    name: "Kertas",
-    reward: 3,
-  },
-  {
-    name: "Sedotan",
-    reward: -2,
-  },
-  {
-    name: "Daun",
-    reward: 1,
-  },
-  {
-    name: "kaleng",
-    reward: 10,
-  },
-];
 
 const news = [
   {
@@ -132,25 +93,6 @@ export default function MobileHomePage() {
 
         <ScrollBar orientation="horizontal" />
       </ScrollArea>
-
-      <div className="relative mt-2 flex h-80 flex-1 flex-col items-center bg-muted">
-        <div className="absolute h-40 w-24 translate-y-12 bg-red-400">
-          {/* badan */}
-        </div>
-        <div className="absolute h-12 w-12 bg-red-300">kepala</div>
-        <div className="absolute h-36 w-8 translate-x-[60px] translate-y-12 -rotate-12 bg-red-400">
-          {/* tangan kiri */}
-        </div>
-        <div className="absolute h-36 w-8 origin-top-right -translate-x-[60px] translate-y-12 rotate-12 bg-red-400">
-          {/* tangan kanan */}
-        </div>
-        <div className="rotate-top-left absolute h-36 w-8 origin-top -translate-x-[24px] translate-y-48 bg-red-400">
-          {/* kaki kiri */}
-        </div>
-        <div className="rotate-top-right absolute h-36 w-8 origin-top translate-x-[24px] translate-y-48 bg-red-400">
-          {/* kaki kanan */}
-        </div>
-      </div>
     </ScrollArea>
   );
 }
