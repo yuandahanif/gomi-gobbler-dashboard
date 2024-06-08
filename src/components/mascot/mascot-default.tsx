@@ -2,27 +2,13 @@ import Image from "next/image";
 
 export default function MascotDefault() {
   return (
-    <div className="relative mx-auto flex h-auto w-72 bg-red-100">
-      <Image
-        src="/images/mascot/hand-left-default.svg"
-        alt="mascot-left-hand"
-        height={60}
-        width={60}
-        className="object-contain"
-      />
-      <Image
-        src="/images/mascot/hand-right-default.svg"
-        alt="mascot-right-hand"
-        height={60}
-        width={60}
-        className="object-contain absolute right-0 top-0"
-      />
+    <div className="relative mx-auto flex h-auto w-72">
       <Image
         src="/images/mascot/foot.svg"
         alt="mascot-foot"
         height={60}
         width={60}
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-8 object-contain"
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-28 object-contain"
       />
 
       <Image
@@ -39,6 +25,21 @@ export default function MascotDefault() {
         height={60}
         width={60}
         className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-0.5 object-contain"
+      />
+      <Image
+        src="/images/mascot/hand-left-default.svg"
+        alt="mascot-left-hand"
+        height={75}
+        width={75}
+        className="absolute left-0 top-0 -translate-y-16 translate-x-8  object-contain"
+      />
+
+      <Image
+        src="/images/mascot/hand-right-default.svg"
+        alt="mascot-right-hand"
+        height={45}
+        width={45}
+        className="absolute left-1/2 top-0 translate-x-9 translate-y-5 6 object-contain"
       />
     </div>
   );
