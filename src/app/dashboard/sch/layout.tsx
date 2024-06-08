@@ -117,21 +117,21 @@ export default function SchoolDashboardLayout({
                   className="flex items-center gap-4 px-2.5 text-foreground"
                 >
                   <ShoppingCart className="h-5 w-5" />
-                  Orders
+                  Tempat Sampah
                 </Link>
                 <Link
                   href="#"
                   className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
                 >
                   <Package className="h-5 w-5" />
-                  Products
+                  Siswa
                 </Link>
                 <Link
                   href="#"
                   className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
                 >
                   <Users2 className="h-5 w-5" />
-                  Customers
+                  Analitik
                 </Link>
                 <Link
                   href="#"
@@ -188,8 +188,8 @@ export default function SchoolDashboardLayout({
 
         {children}
 
-        <footer className="flex w-full justify-center h-14 items-center gap-4 border-t bg-background px-4 sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
-          <p className="text-sm text-center">
+        <footer className="flex h-14 w-full items-center justify-center gap-4 border-t bg-background px-4 sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
+          <p className="text-center text-sm">
             &copy; 2024 neroi.space All rights reserved.
           </p>
         </footer>

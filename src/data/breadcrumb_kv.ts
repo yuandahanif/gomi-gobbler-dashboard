@@ -1,6 +1,7 @@
 const BREADCRUMB_KV: Record<string, string> = {
   sch: "Sekolah",
-//   dashboard: "Dashboard",
+  //   dashboard: "Dashboard",
+  students: "Siswa",
   analitics: "Analitik",
   "trash-bin": "Tempat Sampah",
 
