@@ -11,8 +11,11 @@ export default function MobileRootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="w-full h-full min-h-screen bg-muted flex justify-center items-center">
-      <div className="max-w-screen-sm w-[400px] h-[840px] bg-white overflow-hidden">{children}</div>
+    <div className="relative flex h-full min-h-screen w-full items-center justify-center bg-muted">
+      <div className="absolute  top-0 mx-auto h-[840px] w-[400px] max-w-screen-sm bg-[url('/images/ip_15_frame.png')] bg-contain bg-no-repeat p-5"></div>
+      <div className="relative h-[840px] w-[400px] max-w-screen-sm overflow-hidden bg-white">
+        {children}
+      </div>
     </div>
   );
 }
