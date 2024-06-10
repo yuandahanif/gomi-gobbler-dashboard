@@ -78,36 +78,45 @@ const userRank = 3;
 export default function MobileRankPage() {
   return (
     <div className="relative flex h-full w-full flex-col p-2 pr-2">
-      <div className="mb-2 flex h-44 w-full flex-col items-center overflow-hidden rounded-sm rounded-b-3xl bg-gradient-to-r from-rose-400 to-red-500">
-        <div className="mt-auto flex h-4/5 w-full items-end justify-center gap-2">
+      <div className="mb-2 flex h-44 w-full flex-col items-center overflow-hidden rounded-sm rounded-b-3xl bg-[#E4F493]">
+        <div className="flex h-4/5 w-full items-end justify-center gap-2">
           <div
-            className={`relative mb-5 h-[100px] w-[100px] before:absolute before:-top-1 before:left-1/2 before:h-[200%] before:w-[60px] before:-translate-x-1/2 before:bg-[#c0c0c0] before:content-['']`}
+            className={`relative mb-5 h-[80px] w-[80px] before:absolute before:left-1/2 before:top-2 before:h-[200%] before:w-[60px] before:-translate-x-1/2 before:bg-white before:content-['']`}
           >
             <Image
               src="/images/p-1.jpg"
               alt="https://www.freepik.com/free-vector/back-school-background-with-kids_2496999.htm#fromView=search&page=1&position=30&uuid=f9924c2d-db11-4ef2-a5ba-0f4818d9c09f"
               fill
-              className="clip-path-star -rotate-6 object-cover object-center"
+              className="overflow-hidden rounded-full border-[6px] border-[#667326] object-cover object-center"
             />
 
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[105%]">
+              <p className="line-clamp-1 text-xs">Jania Sherwood</p>
+            </div>
+
             <div
-              className="absolute -top-0 left-1/2 -translate-x-1/2 -translate-y-full text-3xl font-semibold text-white"
+              className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[140%] text-lg font-semibold text-[#8CA700]"
               style={font.style}
             >
               <span>2</span>
             </div>
           </div>
           <div
-            className={`relative mb-10 h-[100px] w-[100px] before:absolute before:-top-1 before:left-1/2 before:h-[200%] before:w-[60px] before:-translate-x-1/2 before:bg-[#d4af37] before:content-['']`}
+            className={`relative mb-10 h-[80px] w-[80px] before:absolute before:left-1/2 before:top-2 before:h-[200%] before:w-[60px] before:-translate-x-1/2 before:bg-white before:content-['']`}
           >
             <Image
               src="/images/p-2.jpg"
               alt="https://www.freepik.com/free-vector/back-school-background-with-kids_2496999.htm#fromView=search&page=1&position=30&uuid=f9924c2d-db11-4ef2-a5ba-0f4818d9c09f"
               fill
-              className="clip-path-star object-cover object-center"
+              className="overflow-hidden rounded-full border-[6px] border-[#667326] object-cover object-center"
             />
+
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[105%]">
+              <p className="line-clamp-1 text-xs">Tucker Johnson</p>
+            </div>
+
             <div
-              className="absolute -top-0 left-1/2 -translate-x-1/2 -translate-y-full text-3xl font-semibold text-white"
+              className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[140%] text-lg font-semibold text-[#8CA700]"
               style={font.style}
             >
               <span>1</span>
@@ -115,16 +124,21 @@ export default function MobileRankPage() {
           </div>
 
           <div
-            className={`relative mb-0 h-[100px] w-[100px] before:absolute before:-top-1 before:left-1/2 before:h-[200%] before:w-[60px] before:-translate-x-1/2 before:bg-[#cd7f32] before:content-['']`}
+            className={`relative mb-0 h-[80px] w-[80px] before:absolute before:left-1/2 before:top-0 before:h-full before:w-[60px] before:-translate-x-1/2 before:translate-y-10 before:bg-white before:content-['']`}
           >
             <Image
               src="/images/p-3.jpg"
               alt="https://www.freepik.com/free-vector/back-school-background-with-kids_2496999.htm#fromView=search&page=1&position=30&uuid=f9924c2d-db11-4ef2-a5ba-0f4818d9c09f"
               fill
-              className="clip-path-star rotate-6 object-cover object-center"
+              className="overflow-hidden rounded-full border-[6px] border-[#667326] object-cover object-center"
             />
+
+            <div className="absolute bottom-0 left-1/2 w-fit -translate-x-1/2 translate-y-[105%]">
+              <p className="line-clamp-1 text-xs">Stevie Daniel</p>
+            </div>
+
             <div
-              className="absolute -top-0 left-1/2 -translate-x-1/2 -translate-y-full text-3xl font-semibold text-white"
+              className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[140%] text-lg font-semibold text-[#8CA700]"
               style={font.style}
             >
               <span>3</span>
@@ -138,8 +152,14 @@ export default function MobileRankPage() {
           className="mx-auto mb-2 mt-3 text-center text-xl font-semibold leading-none"
           style={font.style}
         >
-          Peringkat Minggu Ini
+          Leaderboard
         </h3>
+        {/* <h3
+          className="mx-auto mb-2 mt-3 text-center text-xl font-semibold leading-none"
+          style={font.style}
+        >
+          Peringkat Minggu Ini
+        </h3> */}
 
         <Button
           variant="outline"

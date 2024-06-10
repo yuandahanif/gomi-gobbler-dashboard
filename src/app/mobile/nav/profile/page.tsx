@@ -98,7 +98,7 @@ export default function MobileProfilePage() {
 
         <div className="absolute bottom-0 left-6 translate-y-1/2 rounded-full bg-white p-2">
           <Avatar className="h-20 w-20">
-            <AvatarImage src="https://safebooru.org//images/4619/17289fb65697ec3adda05131d44dfdf150095533.png?4814699" />
+            <AvatarImage src="/images/p-1.jpg" />
             <AvatarFallback>user avatar</AvatarFallback>
           </Avatar>
         </div>
