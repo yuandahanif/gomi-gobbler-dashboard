@@ -97,10 +97,10 @@ const physical_items = [
 export default function MobileShopPage() {
   return (
     <ScrollArea className="h-full w-full p-1 pb-32 pl-2 pr-3">
-      <div className="relative mb-2 flex h-44 w-full flex-col items-center overflow-hidden rounded-sm rounded-b-3xl bg-gradient-to-r from-teal-200 to-teal-500">
-        <ShoppingCart className="absolute left-10 top-5 h-36 w-36 -rotate-45 text-white" />
+      <div className="relative mb-2 flex h-44 w-full flex-col items-center overflow-hidden rounded-sm rounded-b-3xl bg-[#E4F493]">
+        <ShoppingCart className="absolute left-10 top-5 h-36 w-36 -rotate-45 text-black" />
         <div className="mb-5 ml-auto mr-5 flex h-full w-1/2 items-end justify-end text-end">
-          <h1 style={font.style} className="text-2xl text-white font-semibold">
+          <h1 style={font.style} className="text-2xl text-black font-semibold">
             Tukarkan poinmu <br /> dengan <br /> barang-barang menarik!
           </h1>
         </div>
