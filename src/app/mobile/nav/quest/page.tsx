@@ -56,15 +56,15 @@ const completedQuest = 3;
 export default function MobileQuestPage() {
   return (
     <ScrollArea className="h-full w-full p-2 pr-3">
-      <div className="mb-2 flex h-44 w-full flex-col items-center overflow-hidden rounded-sm rounded-b-3xl bg-gradient-to-r from-pink-500 to-rose-500">
+      <div className="mb-2 flex h-44 w-full flex-col items-center overflow-hidden rounded-sm rounded-b-3xl bg-[#E4F493]">
         <div className="mt-auto flex h-full w-full items-center justify-evenly">
           <h1
-            className="mx-auto mb-2 mt-3 text-center text-xl font-semibold leading-none text-white"
+            className="mx-auto mb-2 mt-3 text-center text-xl font-semibold leading-none text-black"
             style={font.style}
           >
             <span className="text-3xl font-semibold">Horee!!</span> Kamu membuang sampah{" "}
             <br />
-            <span className="font-sans text-8xl font-semibold text-cyan-200 drop-shadow-2xl">
+            <span className="font-sans text-8xl font-semibold drop-shadow-2xl">
               691
             </span>{" "}
             <br /> kali benar berturut-turut!
@@ -86,7 +86,7 @@ export default function MobileQuestPage() {
           key={quest.name}
           className={cn(
             "mb-1 flex flex-col rounded-lg border border-gray-300 bg-white p-3 text-sm shadow-md duration-200",
-            completedQuest == idx && "border-green-300 bg-green-100",
+            completedQuest == idx && "border-[#E4F493] bg-[#E4F493]",
           )}
         >
           <div className="flex flex-wrap justify-between">

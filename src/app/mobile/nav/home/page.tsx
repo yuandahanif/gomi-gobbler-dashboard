@@ -39,7 +39,7 @@ const news = [
 export default function MobileHomePage() {
   return (
     <ScrollArea className="h-full w-full p-2 pr-3">
-      <div className="relative mb-2 flex h-fit w-full rounded-sm rounded-b-xl bg-gradient-to-r from-teal-200 to-teal-500 p-3">
+      <div className="relative mb-2 flex h-fit w-full rounded-sm rounded-b-xl bg-[#E4F493] p-3">
         <div className="relative h-32 w-32">
           <Image
             alt="qr code"
@@ -49,7 +49,7 @@ export default function MobileHomePage() {
           />
         </div>
 
-        <div className="ml-auto flex h-auto w-fit flex-col items-end gap-1 bg-gradient-to-r from-amber-200 to-yellow-400 bg-clip-text text-white drop-shadow-sm">
+        <div className="ml-auto flex h-auto w-fit flex-col items-end gap-1 bg-gradient-to-r from-amber-200 to-yellow-400 bg-clip-text drop-shadow-sm">
           <p className="mb-auto mt-0 text-left text-base font-semibold leading-none">
             Poin: 100
           </p>

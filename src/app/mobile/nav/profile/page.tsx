@@ -88,8 +88,8 @@ const achievements_unlocked_idx = 2;
 export default function MobileProfilePage() {
   return (
     <ScrollArea className="h-full w-full p-2 pr-3">
-      <div className="relative mb-2 flex h-14 w-full flex-col items-center rounded-sm rounded-b-xl bg-gradient-to-r from-violet-200 to-pink-200">
-        <div className="ml-auto mt-auto flex w-fit items-center gap-1 bg-gradient-to-r from-amber-200 to-yellow-400 bg-clip-text pb-2 pr-2 text-white drop-shadow-sm">
+      <div className="relative mb-2 flex h-14 w-full flex-col items-center rounded-sm rounded-b-xl bg-[#E4F493]">
+        <div className="ml-auto mt-auto flex w-fit items-center gap-1 bg-gradient-to-r from-amber-200 to-yellow-400 bg-clip-text pb-2 pr-2 drop-shadow-sm">
           <h2 className="mt-0 text-left text-sm leading-none">
             penyihir pemilah
           </h2>

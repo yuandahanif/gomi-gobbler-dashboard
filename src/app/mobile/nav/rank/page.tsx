@@ -176,8 +176,8 @@ export default function MobileRankPage() {
           <div
             key={name}
             className={cn(
-              "mb-1 flex justify-between rounded-lg border border-blue-300 bg-white p-3 text-sm shadow-md",
-              userRank == idx && "bg-blue-100",
+              "mb-1 flex justify-between rounded-lg border border-[#E4F493] bg-white p-3 text-sm shadow-md",
+              userRank == idx && "bg-[#E4F493]",
             )}
           >
             <p className="font-semibold">

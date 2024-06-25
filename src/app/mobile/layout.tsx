@@ -11,7 +11,7 @@ export default function MobileRootLayout({
 }>) {
   return (
     <div className="relative flex h-full min-h-screen w-full items-center justify-center bg-muted">
-      <div className="absolute top-0 mx-auto h-[840px] w-[400px] max-w-screen-sm bg-[url('/images/ip_15_frame.png')] bg-contain bg-no-repeat p-5"></div>
+      {/* <div className="absolute top-0 mx-auto h-[840px] w-[400px] max-w-screen-sm bg-[url('/images/ip_15_frame.png')] bg-contain bg-no-repeat p-5"></div> */}
       <div className="relative h-[840px] w-[400px] max-w-screen-sm overflow-hidden bg-white">
         {children}
       </div>
